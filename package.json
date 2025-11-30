@@ -1,0 +1,47 @@
+{
+  "name": "wow-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "nodemon --watch src -e ts --exec \"ts-node src/main.ts\"",
+    "test": "node -r ts-node/register --test src/**/*.test.ts",
+    "dev:auth": "nodemon --watch src -e ts --exec \"ts-node src/server/apps/authserver/main.ts\"",
+    "dev:world": "nodemon --watch src -e ts --exec \"ts-node src/server/apps/world-server/main.ts\"",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "bcrypt": "^6.0.0",
+    "bigint-conversion": "^2.4.3",
+    "bn.js": "^5.2.2",
+    "bytebuffer": "^5.0.1",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.7",
+    "mysql2": "^3.15.3",
+    "pino": "^10.1.0",
+    "pino-pretty": "^13.1.2",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.56.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/bn.js": "^5.2.0",
+    "@types/bytebuffer": "^5.0.49",
+    "@types/node": "^24.10.1",
+    "@types/uws": "^0.13.7",
+    "drizzle-kit": "^0.31.7",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
